@@ -49,14 +49,16 @@ Monthly charges
 Total charges
 Churn status
 ```
----
-# Business Problem
-Telecom companies need to understand:
 
--Which customers are likely to leave?
--Why are they likely to leave?
--What type of customers are they?
--What action should be taken to retain them?
+# Project Objective
 
-This project attempts to answer these questions using machine learning, segmentation, and recommendation logic.
----
+The objective of this project is to build an end-to-end customer retention decision-support system for telecom businesses.
+
+The system aims to:
+
+- Predict whether a customer is likely to churn
+- Estimate customer churn probability
+- Segment customers into meaningful groups
+- Identify key churn risk factors
+- Recommend retention actions
+- Provide a deployable API and user interface for practical use
