@@ -1,125 +1,51 @@
-# Telco Churn & Segmentation Project
+# Customer Segmentation and Retention Analysis
 
-This project predicts:
-- Customer churn probability
-- Customer segment
-
-## Run locally with Docker
-```bash
-docker compose up --build
-Services
-FastAPI: http://localhost:8000/docs
-Streamlit: http://localhost:8501
+A machine learning project for telecom customer segmentation, churn prediction, and retention recommendation using XGBoost, K-Means, FastAPI, Streamlit, and Docker.
 
 ---
 
-# 5. Very important notebook step before using this project
+# Project Objective
 
-Make sure you saved the correct feature columns from your training notebook:
+The objective of this project is to build an end-to-end customer retention decision-support system for telecom businesses.
 
-```python
-import joblib
-joblib.dump(X.columns.tolist(), 'models/feature_columns.pkl')
-6. How the full system works
-Flow
-User enters customer info in Streamlit
-Streamlit sends JSON to FastAPI /predict
-FastAPI:
-preprocesses raw input
-prepares XGBoost input using feature_columns.pkl
-predicts churn
-creates clustering features
-scales them with scaler_cluster.pkl
-predicts segment with kmeans_model.pkl
-FastAPI returns JSON
-Streamlit shows result
-7. How to run locally without Docker first
+The system aims to:
 
-From project root:
+- Predict whether a customer is likely to churn
+- Estimate customer churn probability
+- Segment customers into meaningful groups
+- Identify key churn risk factors
+- Recommend retention actions
+- Provide a deployable API and user interface for practical use
 
-Start API
-uvicorn app.main:app --reload
+---
 
-Open:
+# Purpose of the Project
 
-http://127.0.0.1:8000/docs
-Start Streamlit
+Customer churn is a major challenge in the telecom industry. Acquiring new customers is often more expensive than retaining existing ones. If a company can identify at-risk customers early, it can take proactive actions such as offering better plans, improving support, or providing personalized retention offers.
 
-Open another terminal:
+This project was built to explore how machine learning can help telecom companies move from reactive customer retention to proactive customer retention.
 
-streamlit run ui/streamlit_app.py
+---
 
-If running locally without Docker, change this line in ui/streamlit_app.py:
+# Dataset
 
-API_URL = "http://api:8000/predict"
+This project uses the publicly available **Telco Customer Churn dataset** from Kaggle.
 
-to:
+Dataset source:
 
-API_URL = "http://127.0.0.1:8000/predict"
+https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
-For Docker Compose, keep http://api:8000/predict.
+Dataset file used:
 
-8. How to run with Docker
+```text
+WA_Fn-UseC_-Telco-Customer-Churn.csv
+The dataset contains customer-level telecom information such as:
 
-From project root:
-
-docker compose up --build
-
-Then open:
-
-FastAPI docs: http://localhost:8000/docs
-Streamlit UI: http://localhost:8501
-9. What files in your current project are necessary
-Necessary for runtime
-
-Keep:
-
-models/xgb_model.pkl
-models/feature_columns.pkl
-models/kmeans_model.pkl
-models/scaler_cluster.pkl
-Not necessary for runtime
-
-These are optional:
-
-outputs/*.png
-outputs/customer_churn_predictions.csv
-raw notebook charts
-confusion matrix images
-SHAP plots
-ROC plots
-CSV
-
-data/WA_Fn-UseC_-Telco-Customer-Churn.csv is optional for deployment. Keep it for reference, but runtime doesn’t need it.
-
-10. Final advice before you start
-
-Follow this exact order:
-
-Step 1
-
-Create folders and files
-
-Step 2
-
-Put your .pkl files into models/
-
-Step 3
-
-Paste all backend code
-
-Step 4
-
-Test FastAPI in /docs
-
-Step 5
-
-Paste Streamlit code
-
-Step 6
-
-Run UI locally
-
-Step 7
-
-Dockerize and run compose
+Customer demographics
+Service subscriptions
+Contract type
+Payment method
+Monthly charges
+Total charges
+Churn status
+```
