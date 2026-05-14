@@ -50,13 +50,16 @@ Total charges
 Churn status
 ```
 
-# Business Problem
+## Business Problem
 
-Telecom companies need to understand:
+Customer churn is a major challenge for telecom companies because losing existing customers directly affects revenue, customer lifetime value, and long-term business growth. Instead of reacting after customers leave, telecom businesses need a way to identify at-risk customers early and take proactive retention actions.
 
-- Which customers are likely to leave?
-- Why are they likely to leave?
-- What type of customers are they?
-- What action should be taken to retain them?
-This project attempts to answer these questions using machine learning, segmentation, and recommendation logic.
+This project focuses on answering four key business questions:
+
+- Which customers are likely to churn?
+- What factors are contributing to their churn risk?
+- What type of customer segment do they belong to?
+- What retention action can be taken to reduce the risk?
+
+By combining churn prediction, customer segmentation, and retention recommendation logic, this project aims to support more targeted and data-driven customer retention decisions.
 
