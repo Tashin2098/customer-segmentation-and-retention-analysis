@@ -63,3 +63,129 @@ This project focuses on answering four key business questions:
 
 By combining churn prediction, customer segmentation, and retention recommendation logic, this project aims to support more targeted and data-driven customer retention decisions.
 
+## Community and Business Impact
+
+This system can support telecom and subscription-based businesses by helping them make more proactive and data-driven customer retention decisions.
+
+Potential business impacts include:
+
+- Identifying at-risk customers early
+- Reducing customer churn
+- Improving customer satisfaction and engagement
+- Supporting targeted retention campaigns
+- Reducing unnecessary marketing costs
+- Improving customer lifetime value
+- Helping customer support teams prioritize high-risk users
+- Enabling data-driven business decision-making
+
+From a broader perspective, intelligent retention systems can help businesses provide more personalized and relevant customer experiences instead of relying on generic campaigns for all users.
+
+---
+
+## Machine Learning Approach
+
+This project combines customer segmentation and churn prediction to better understand customer behavior and retention risk.
+
+### 1. Customer Segmentation
+
+K-Means clustering is used to group customers based on behavioral and service-related characteristics.
+
+The segmentation process helps identify different types of customers, such as:
+
+- New high-spend customers
+- Loyal high-engagement customers
+- Low-value stable customers
+- High-spend moderate-engagement customers
+- New low-spend customers
+
+Customer segmentation helps businesses understand different customer groups and design more targeted retention strategies.
+
+### 2. Churn Prediction
+
+XGBoost is used to predict customer churn probability.
+
+The model predicts:
+
+- Churn probability
+- Churn or no churn
+- Risk level
+
+The churn prediction pipeline includes:
+
+- Data preprocessing
+- Feature engineering
+- Class imbalance handling
+- Probability calibration
+- Threshold tuning
+
+---
+
+## Key Features
+
+The system provides:
+
+- Customer churn prediction
+- Churn probability estimation
+- Customer risk classification
+- Customer segmentation
+- Segment naming and interpretation
+- Risk factor identification
+- Protective factor identification
+- Retention recommendations
+- FastAPI backend API
+- Streamlit frontend interface
+- Dockerized deployment
+
+---
+
+## Feature Engineering
+
+Feature engineering was used extensively to make the model more behavior-aware and business-oriented.
+
+The project includes engineered features from multiple perspectives:
+
+### Customer Lifecycle Features
+
+- `Is_New_Customer`
+- `Is_Early_Customer`
+- `Is_Long_Term`
+
+### Contract Features
+
+- `Is_Month_to_Month`
+- `Has_Long_Contract`
+
+### Pricing Features
+
+- `High_Monthly_Charge`
+- `Very_High_Monthly_Charge`
+
+### Service Features
+
+- `Has_Fiber`
+- `No_Internet`
+- `Has_TechSupport`
+- `Has_OnlineSecurity`
+- `Has_OnlineBackup`
+- `Has_DeviceProtection`
+
+### Payment Features
+
+- `Uses_Electronic_Check`
+- `Uses_AutoPay`
+
+### Engagement Features
+
+- `Service_Count`
+- `Engagement_Score`
+
+### Interaction Features
+
+- `New_Monthly_HighCharge`
+- `Fiber_HighCharge`
+- `NoSupport_Monthly`
+- `ElectronicCheck_Monthly`
+- `LowEngagement_HighCharge`
+- `Avg_Charge_Per_Tenure`
+
+These engineered features help the model learn customer behavior patterns more effectively compared to using only raw dataset features.
