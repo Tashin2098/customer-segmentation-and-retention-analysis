@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Large/temporary outputs
+outputs/
+*.png
+*.jpg
+*.jpeg
+
+# Optional: ignore dataset if large/private
+# data/
+
+# Optional: ignore models if large
+# models/*.pkl
