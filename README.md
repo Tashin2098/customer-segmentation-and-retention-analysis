@@ -49,6 +49,7 @@ Monthly charges
 Total charges
 Churn status
 ```
+---
 # Business Problem
 Telecom companies need to understand:
 
@@ -58,3 +59,4 @@ Telecom companies need to understand:
 -What action should be taken to retain them?
 
 This project attempts to answer these questions using machine learning, segmentation, and recommendation logic.
+---
