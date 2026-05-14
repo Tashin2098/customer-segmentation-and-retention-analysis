@@ -50,15 +50,12 @@ Total charges
 Churn status
 ```
 
-# Project Objective
+# Business Problem
 
-The objective of this project is to build an end-to-end customer retention decision-support system for telecom businesses.
+Telecom companies need to understand:
 
-The system aims to:
+- Which customers are likely to leave?
+- Why are they likely to leave?
+- What type of customers are they?
+- What action should be taken to retain them?
 
-- Predict whether a customer is likely to churn
-- Estimate customer churn probability
-- Segment customers into meaningful groups
-- Identify key churn risk factors
-- Recommend retention actions
-- Provide a deployable API and user interface for practical use
