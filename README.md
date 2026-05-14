@@ -189,3 +189,47 @@ The project includes engineered features from multiple perspectives:
 - `Avg_Charge_Per_Tenure`
 
 These engineered features help the model learn customer behavior patterns more effectively compared to using only raw dataset features.
+
+## Static Dataset Limitation
+
+The dataset used in this project is a static snapshot dataset, meaning each customer is represented by a single row at one specific point in time.
+
+While this type of dataset is useful for learning, experimentation, and prototyping, real-world telecom churn prediction systems typically rely on dynamic and time-based behavioral data.
+
+In a real telecom environment, churn prediction models would use continuously updated customer activity data such as:
+
+- Recharge trends
+- Data usage trends
+- Complaint history
+- Customer support interactions
+- Network experience and service quality
+- Payment delays
+- App usage behavior
+- Customer engagement patterns
+
+These time-series behavioral signals help telecom companies detect gradual changes in customer engagement and identify early churn indicators more effectively.
+
+This project acknowledges that limitation and uses feature engineering to simulate more behavior-aware customer analysis. However, a production-grade telecom retention system would require continuous customer behavior tracking, real-time data pipelines, and dynamic model updates.
+
+---
+
+## System Architecture
+
+```text
+Customer Input
+     ↓
+Streamlit User Interface
+     ↓
+FastAPI Backend
+     ↓
+Feature Engineering
+     ↓
+XGBoost Churn Prediction
+     ↓
+K-Means Customer Segmentation
+     ↓
+Retention Recommendation Logic
+     ↓
+Prediction Result in UI
+
+
