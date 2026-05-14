@@ -49,3 +49,12 @@ Monthly charges
 Total charges
 Churn status
 ```
+# Business Problem
+Telecom companies need to understand:
+
+ -Which customers are likely to leave?
+ -Why are they likely to leave?
+ -What type of customers are they?
+ -What action should be taken to retain them?
+
+This project attempts to answer these questions using machine learning, segmentation, and recommendation logic.
